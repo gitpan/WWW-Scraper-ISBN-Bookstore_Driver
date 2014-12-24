@@ -2,7 +2,7 @@
 use strict;
 
 use Data::Dumper;
-use Test::More tests => 53;
+use Test::More tests => 35;
 use WWW::Scraper::ISBN;
 
 ###########################################################
@@ -24,43 +24,25 @@ my %tests = (
         [ 'like',   'depth',        qr/\d+/                     ],
         [ 'like',   'width',        qr/\d+/                     ],
         [ 'like',   'height',       qr/\d+/                     ],
-        [ 'like',   'image_link',   qr|9780007203055.jpg|    ],
-        [ 'like',   'thumb_link',   qr|9780007203055.jpg|    ],
-        [ 'like',   'description',  qr|The Mediterranean Sea lies at the very heart of recent world history|           ],
-        [ 'like',   'book_link',    qr|http://www.bookstore.co.uk/TBP.Direct/PurchaseProduct.*?9780007203055|    ]
+        [ 'like',   'image_link',   qr|9780007203055.jpg|       ],
+        [ 'like',   'thumb_link',   qr|9780007203055.jpg|       ],
+        [ 'like',   'description',  qr|The Mediterranean Sea lies at the very heart of recent world history|    ],
+        [ 'like',   'book_link',    qr|http://www.bookstore.co.uk/TBP.Direct/PurchaseProduct.*?9780007203055|   ]
     ],
-    '0571239560' => [
-        [ 'is',     'isbn',         '9780571239566'             ],
-        [ 'is',     'isbn10',       '0571239560'                ],
-        [ 'is',     'isbn13',       '9780571239566'             ],
-        [ 'is',     'ean13',        '9780571239566'             ],
-        [ 'is',     'title',        'Touching from a Distance'        ],
-        [ 'is',     'author',       'Curtis, Deborah'            ],
-        [ 'is',     'publisher',    'Faber and Faber'        ],
-        [ 'is',     'pubdate',      '04/10/2007'              ],
+    '0571313604' => [
+        [ 'is',     'isbn',         '9780571313600'             ],
+        [ 'is',     'isbn10',       '0571313604'                ],
+        [ 'is',     'isbn13',       '9780571313600'             ],
+        [ 'is',     'ean13',        '9780571313600'             ],
+        [ 'is',     'title',        'Touching from a Distance'  ],
+        [ 'is',     'author',       'Curtis, Deborah'           ],
+        [ 'is',     'publisher',    'Faber & Faber'             ],
+        [ 'is',     'pubdate',      '02/10/2014'                ],
         [ 'is',     'pages',        240                         ],
-        [ 'like',   'image_link',   qr|9780571239566.jpg|    ],
-        [ 'like',   'thumb_link',   qr|9780571239566.jpg|    ],
-        [ 'like',   'description',  qr|Ian Curtis left behind a legacy rich in artistic genius|     ],
-        [ 'like',   'book_link',    qr|http://www.bookstore.co.uk/TBP.Direct/PurchaseProduct.*?9780571239566|    ]
-    ],
-    '9780571239566' => [
-        [ 'is',     'isbn',         '9780571239566'             ],
-        [ 'is',     'isbn10',       '0571239560'                ],
-        [ 'is',     'isbn13',       '9780571239566'             ],
-        [ 'is',     'ean13',        '9780571239566'             ],
-        [ 'is',     'title',        'Touching from a Distance'        ],
-        [ 'is',     'author',       'Curtis, Deborah'            ],
-        [ 'is',     'publisher',    'Faber and Faber'        ],
-        [ 'is',     'pubdate',      '04/10/2007'              ],
-        [ 'is',     'pages',        240                         ],
-        [ 'like',   'depth',        qr/\d+/                     ],
-        [ 'like',   'width',        qr/\d+/                     ],
-        [ 'like',   'height',       qr/\d+/                     ],
-        [ 'like',   'image_link',   qr|9780571239566.jpg|    ],
-        [ 'like',   'thumb_link',   qr|9780571239566.jpg|    ],
-        [ 'like',   'description',  qr|Ian Curtis left behind a legacy rich in artistic genius|     ],
-        [ 'like',   'book_link',    qr|http://www.bookstore.co.uk/TBP.Direct/PurchaseProduct.*?9780571239566|    ]
+        [ 'like',   'image_link',   qr|9780571313600.jpg|       ],
+        [ 'like',   'thumb_link',   qr|9780571313600.jpg|       ],
+        [ 'like',   'description',  qr|Ian Curtis left behind a legacy rich in artistic genius|                 ],
+        [ 'like',   'book_link',    qr|http://www.bookstore.co.uk/TBP.Direct/PurchaseProduct.*?9780571313600|   ]
     ],
 );
 

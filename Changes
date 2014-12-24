@@ -1,6 +1,9 @@
 Revision history for WWW-Scraper-ISBN-Bookstore_Driver
 ======================================================
 
+0.04    2014-12-24
+        - updated test data.
+
 0.03    2014-11-04
         - extended META test suite.
         - ping fix for Cygwin (thanks to Alexandr Ciornii).

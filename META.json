@@ -1,6 +1,6 @@
 {
     "name": "WWW-Scraper-ISBN-Bookstore_Driver",
-    "version": "0.03",
+    "version": "0.04",
     "abstract": "Search driver for The Bookstore online book catalog",
     "author": ["Barbie <barbie@cpan.org>"],
 
@@ -45,7 +45,7 @@
     "provides": {
         "WWW::Scraper::ISBN::Bookstore_Driver": {
             "file": "lib/WWW/Scraper/ISBN/Bookstore_Driver.pm",
-            "version": "0.03"
+            "version": "0.04"
         }
     },
     "no_index": {
